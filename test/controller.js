@@ -6,7 +6,7 @@ const Offer = artifacts.require('Offer');
 const Dino = artifacts.require('Dino');
 const Dino721 = artifacts.require('Dino721');
 const MockERC721 = artifacts.require('MockERC721');
-const BEP20 = artifacts.require('ERC20');
+const BEP20 = artifacts.require('BEP20');
 
 contract('Controller test', ([alice, bob, carol, dev, minter]) => {
     beforeEach(async () => {
@@ -37,6 +37,11 @@ contract('Controller test', ([alice, bob, carol, dev, minter]) => {
             "newNFT",
             "100000000",
             "100",
+            ["0x0000000000000000000000000000000000000000",
+                "0x0000000000000000000000000000000000000000",
+                "0x0000000000000000000000000000000000000000",
+                "0x0000000000000000000000000000000000000000"],
+            ["0","0","0","0"],
             {from: dev, value: "100000000000000000"});
         console.log(res.receipt.gasUsed);
 
@@ -55,6 +60,11 @@ contract('Controller test', ([alice, bob, carol, dev, minter]) => {
             "existingNFT",
             "100000000",
             "100",
+            ["0x0000000000000000000000000000000000000000",
+                "0x0000000000000000000000000000000000000000",
+                "0x0000000000000000000000000000000000000000",
+                "0x0000000000000000000000000000000000000000"],
+            ["0","0","0","0"],
             {from: dev, value: "100000000000000000"});
         console.log(res.receipt.gasUsed);
 
@@ -72,6 +82,11 @@ contract('Controller test', ([alice, bob, carol, dev, minter]) => {
             "newNFT",
             "100000000",
             "100",
+            ["0x0000000000000000000000000000000000000000",
+                "0x0000000000000000000000000000000000000000",
+                "0x0000000000000000000000000000000000000000",
+                "0x0000000000000000000000000000000000000000"],
+            ["0","0","0","0"],
             {from: dev, value: "100000000000000000"});
 
         await time.advanceBlockTo('100');
@@ -103,6 +118,11 @@ contract('Controller test', ([alice, bob, carol, dev, minter]) => {
             "newNFT",
             "100000000",
             "200",
+            ["0x0000000000000000000000000000000000000000",
+                "0x0000000000000000000000000000000000000000",
+                "0x0000000000000000000000000000000000000000",
+                "0x0000000000000000000000000000000000000000"],
+            ["0","0","0","0"],
             {from: dev, value: "100000000000000000"});
 
         await time.advanceBlockTo('200');

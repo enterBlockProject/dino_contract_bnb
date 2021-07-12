@@ -26,10 +26,12 @@ module.exports = function (deployer) {
         return deployer.deploy(Distributor,
             Dino.address,
             "1000000000000000000",
-            "10120000",
+            "10520000",
             "20000000",
-            "10000000000000000",
-            "20000000");
+            "10550000",
+            "10600000",
+            "10",
+            "5");
     }).then(function(instance) {
         distributorInstance = instance;
         return deployer.deploy(Mapper, Dino.address);
