@@ -10,8 +10,6 @@ const MockBEP20 = artifacts.require('MockBEP20');
 const MockERC721 = artifacts.require('MockERC721');
 
 module.exports = function (deployer) {
-
-    /*
     let dinoInstance;
     let distributorInstance;
     deployer.deploy(Dino,
@@ -25,13 +23,10 @@ module.exports = function (deployer) {
     }).then(function(instance) {
         return deployer.deploy(Distributor,
             Dino.address,
-            "1000000000000000000",
-            "10520000",
-            "20000000",
-            "10550000",
-            "10600000",
-            "10",
-            "5");
+            "10926500",
+            "10512000",
+            "156000000",
+            "3");
     }).then(function(instance) {
         distributorInstance = instance;
         return deployer.deploy(Mapper, Dino.address);
@@ -70,6 +65,4 @@ module.exports = function (deployer) {
     }).catch(function(error) {
         console.log(error);
     });
-
-     */
 }
